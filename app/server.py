@@ -12,7 +12,7 @@ from fastai import *
 from fastai.text import *
 
 
-model_file_url = 'should not get here'
+model_file_url = 'https://github.com/tank671/deepdonald/blob/master/app/models/trump_all.pth?raw=true'
 model_file_name = 'trump_all'
 path = Path(__file__).parent
 
