@@ -48,6 +48,15 @@ def respondTweet(text, user, msg_id):
     else:
         respondTweet(text, user, msg_id)
 
+def trump_tweets():
+    tweetstorm = (random.random() < 0.3)
+    if tweetstorm:
+        num = random.randint(2,8)
+    else:
+        num = 1
+    for i in range(num):
+        generateTweet(printing=True, publish=True)
+
 class MyStreamListener(tweepy.StreamListener):
     def on_status(self, status):
         if status.text.split()[0] == '@RNN_DonaldTrump':

@@ -7,7 +7,7 @@ from fastai.text import *
 from pathlib import Path
 from os import environ
 
-INTERVAL = 60*5 # for testing
+INTERVAL = 60*10 # for testing
 exec(open("twitter.py").read())
 
 myStreamListener = MyStreamListener()
@@ -17,5 +17,5 @@ myStream.filter(track=['@RNN_DonaldTrump'], is_async=True)
 while True:
     for follower in tweepy.Cursor(api.followers).items():
         follower.follow()
-    generateTweet(printing=True, publish=True)
+    trump_tweets()
     time.sleep(INTERVAL)
