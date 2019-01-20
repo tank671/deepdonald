@@ -1,0 +1,23 @@
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <link rel='stylesheet' href='../static/style.css'>
+        <script src='../static/client.js'></script>
+    </head>
+    <body>
+    <div class="sideimage">
+	<a href = "https://twitter.com/RNN_DonaldTrump" target="_blank"><img src="static/Twitter_Logo_WhiteOnBlue.png" target="_blank" /></a>
+	<a href = "https://github.com/tank671/deepdonald" target="_blank"><img src="static/GitHub-Mark-Light-32px.png" target="_blank" /></a>
+    </div>
+
+    <div class="main">
+	  <div class="title">Deep Donald</div>
+	  <div class="description">@RNN_DonaldTrump</div>
+	    <span class="input"> <input id="text-input" onchange='showText(this)' type="text" placeholder="Type the first few words of the tweet" maxlength="20"> </span>
+	    <div class='analyze'>
+		    <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Generate Text</button>
+	    </div>
+	<div class='result-label'> <label id='result-label'></label> </div>
+    </div>
+    </body>
+</html>
