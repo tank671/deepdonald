@@ -57,11 +57,10 @@ async def analyze(request):
 def textResponse(data):
     starter = data['file']
     if starter != '':
-        res = generate_text(starter=starter)
+        res = generateText(starter=starter)
     else:
-        res = generate_text()
+        res = generateText()
     return res
 
 if __name__ == '__main__':
-    if 'serve' in sys.argv: uvicorn.run(app, host='0.0.0.0', port=5000)
-
+    if 'serve' in sys.argv: uvicorn.run(app, host='0.0.0.0', port=8080)

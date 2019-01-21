@@ -1,0 +1,8 @@
+runtime: custom
+env: flex
+resources:
+    memory_gb: 4
+readiness_check:
+    app_start_timeout_sec: 1800
+    timeout_sec: 60
+    check_interval_sec: 60
