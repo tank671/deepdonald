@@ -74,6 +74,8 @@ def cleanText(text, for_twitter=False):
 def trimText(text, n=0, for_twitter=False):
     if len(text) == 0:
         res = False
+	elif n >= (len(re.split(r"[\.\!\?]", text)) - 1):
+        res = False
     else:
         pieces = re.split(r"[\.\!\?]", text)
         punc = re.findall(r"[\.\!\?]", text)
