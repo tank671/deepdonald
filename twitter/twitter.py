@@ -64,3 +64,6 @@ class MyStreamListener(tweepy.StreamListener):
             msg_id = status.id
             starter = status.text.split()[1:]
             respondTweet(starter, user, msg_id)
+		else:
+            msg_id = status.id
+            api.create_favorite(msg_id)

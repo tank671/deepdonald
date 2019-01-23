@@ -12,7 +12,7 @@ exec(open("twitter.py").read())
 
 myStreamListener = MyStreamListener()
 myStream = tweepy.Stream(auth = api.auth, listener=myStreamListener)
-myStream.filter(track=['@RNN_DonaldTrump'], is_async=True)
+myStream.filter(track=['RNN_DonaldTrump'], is_async=True)
 
 while True:
     for follower in tweepy.Cursor(api.followers).items():
